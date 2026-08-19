@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "Shawn",
+    "Age": "26",
+    "City": "Dhaka",
+    "PrevCompany": []
+  },
+  {
+    "Name": "Shawon",
+    "OrderProducts": [
+        {
+            "Product": "Shoe",
+            "Price": 500
+        },
+        {
+            "Product": "Bag",
+            "Price": 800
+        }
+    ]
+  }
+]
