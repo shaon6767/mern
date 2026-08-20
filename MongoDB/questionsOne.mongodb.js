@@ -104,16 +104,46 @@ use("test");
 
 //db.users.find({ name: { $regex: /^R/ } });
 
-// find users email that has gmail
+// find users email that has gmail//
 
 // db.users.find({ email: /gmail/ });
 
-//find who doesnt have phone field
+//find who doesnt have phone field//
 
 // db.users.find({ phone: { $exists: false } });
 
-//sort users by age in ascending order
+//sort users by age in ascending order//
 
 //db.users.find().sort({ age: 1 });
 
+//find users whos age is not 20,25 or 30//
 
+//db.users.find({ age: { $in: [20, 25, 30] } });
+
+//find users whose name is Rahul Sharma and city is Delhi//
+
+//db.users.find({ $and: [{ name: "Rahul Sharma" }, { city: "Delhi" }] });
+
+// find users whose city is delhi or mumbai
+
+//db.users.find({ $or: [{ city: "Delhi" }, { city: "Mumbai" }] });
+
+// find users whose name ends with a
+
+//db.users.find({ name: /a$/ });
+
+//find users email with last domain yahoo.com
+
+//db.users.find({ email: /yahoo\.com$/ });
+
+//find users whose age field type is number
+
+//db.users.find({ age: { $type: "int" } });
+
+//find users whose age is even number
+
+//db.users.find({ age: { $mod: [2, 0] } });
+
+//find name length thats bigger than 5 char
+
+db.users.find({ name: { $size: { $gt: 5 } } });

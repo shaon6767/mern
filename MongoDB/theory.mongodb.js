@@ -67,6 +67,6 @@ db.users.find()
   .sort({ age: -1 })
   .skip(5)
   .limit(10)
-//Thats how we use pagination.//
+//Thats how we create pagination.//
 
 */
