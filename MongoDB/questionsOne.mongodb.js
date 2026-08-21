@@ -146,4 +146,4 @@ use("test");
 
 //find name length thats bigger than 5 char
 
-db.users.find({ name: { $size: { $gt: 5 } } });
+//db.users.find({ name: { $size: { $gt: 5 } } });
