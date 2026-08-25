@@ -130,4 +130,11 @@ use("test");
 //   orderDate: { $gt: "2025-01-01" }
 // });
 
+//delete orders thats more than 5 years old
+
+// db.orders.find({
+//   orderDate: {
+//     $gt: new Date(new Date().setFullYear(new Date().getFullYear() - 5)),
+//   },
+// });
 
