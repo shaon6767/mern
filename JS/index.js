@@ -16,3 +16,4 @@ function finishGreeting() {
 // Pass finishGreeting to greetUser without parentheses as an argument. This means we are passing the function itself, not the result of calling it.
 // Parentheses would call it immediately; passing the function lets greetUser call it. thats why we don't use parentheses when passing a callback function. then its called a callback function.
 greetUser("Alex", finishGreeting);
+
