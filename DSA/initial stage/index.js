@@ -1,4 +1,4 @@
-//----Remove Duplicates from Sorted List--//
+//----Remove Duplicates from array--//
 let removeDuplicates = function (numbers) {
   let slow = 0;
 
@@ -11,3 +11,4 @@ let removeDuplicates = function (numbers) {
   return slow + 1;
 };
 
+console.log(removeDuplicates([1, 1, 2])); // Output: 2
