@@ -1,14 +1,27 @@
 //----Remove Duplicates from array--//
-let removeDuplicates = function (numbers) {
-  let slow = 0;
+var sortedSquares = function(nums) {
+    let left = 0;
+    let right = nums.length - 1;
 
-  for (let fast = 1; fast < numbers.length; fast++) {
-    if (numbers[fast] !== numbers[slow]) {
-      slow++;
-      numbers[slow] = numbers[fast];
+    let result = new Array(nums.length);
+
+    let index = nums.length - 1;
+
+    while (left <= right) {
+
+        let leftSquare = nums[left] * nums[left];
+        let rightSquare = nums[right] * nums[right];
+
+        if (leftSquare > rightSquare) {
+            result[index] = leftSquare;
+            left++;
+        } else {
+            result[index] = rightSquare;
+            right--;
+        }
+
+        index--;
     }
-  }
-  return slow + 1;
-};
 
-console.log(removeDuplicates([1, 1, 2])); // Output: 2
+    return result;
+};
