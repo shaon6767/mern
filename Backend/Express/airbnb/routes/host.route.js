@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/host/add-home", (req, res) => {
+router.get("/add-home", (req, res) => {
   res.send(`
     <h1>Register here</h1>
     <form action="/host/add-home" method="POST">
@@ -12,7 +12,7 @@ router.get("/host/add-home", (req, res) => {
     `);
 });
 
-router.post("/host/add-home", (req, res) => {
+router.post("/add-home", (req, res) => {
   const { name } = req.body;
   console.log("Received data:", name);
   res.send(`
